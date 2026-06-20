@@ -807,3 +807,47 @@ body {
 .user-dropdown-logout:hover {
   background: rgba(224, 71, 62, 0.1);
 }
+/* ===== Password input with inline status icon ===== */
+
+.password-input-wrap {
+  position: relative;
+  display: flex;
+}
+
+.password-input-wrap input {
+  width: 100%;
+  padding-right: 36px; /* room for the icon so text doesn't overlap it */
+}
+
+.password-status-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-status-icon.valid {
+  color: #fff;
+  background: #3ea05c;
+}
+
+.password-status-icon.invalid {
+  color: #fff;
+  background: #e0473e;
+}
+
+/* ===== Static instruction text below the field ===== */
+
+.password-instructions {
+  font-size: 12px;
+  color: var(--text-muted, #888);
+  margin: 6px 0 0 0;
+}
